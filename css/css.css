@@ -1,0 +1,113 @@
+:root {
+    --main-purple-color: #5c48f1;
+    --elements-background-color: #eeecfd;
+    --element-border-color: #e0e0e1;
+}
+i.bug,i.fa-puzzle-piece{
+    font-weight: 900;
+}
+.parent{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxes:not(:last-child){
+    padding-bottom: 20px;
+}
+.boxes{
+    display: flex;
+    gap: 20px;
+}
+@media (max-width:767px){
+    .boxes{
+        flex-direction: column;
+    }
+}
+.parent > h2{
+    color: #5c48f1;
+    background: #5c48f157;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+}
+.parent .box{
+    border: 2px solid #ddd;
+    padding: 50px;
+    border-radius: 5px;
+    position: relative;
+    width: 100px;
+}
+.parent .box .chexkbox-one {
+    color: #5c48f1;
+}
+/* content: '';
+position: absolute;
+width: 13px;
+height: 13px;
+border: 1px solid #ddd;
+border-radius: 4px; */
+input[type="checkbox"]{
+    appearance: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.parent input.opacity::after{
+    content: '';
+    position: absolute;
+    /* width: 10px;
+    height: 10px;
+    top: 2px;
+    left: 2px; */
+    width: 8px;
+    height: 8px;
+    top: 3px;
+    left: 3.2px;
+    border-radius: 2px;
+    background: var(--element-border-color);
+    /* background-color: var(--main-purple-color); */
+}
+.parent input.theme::after{
+    content: '';
+    position: absolute;
+    /* width: 10px;
+    height: 10px;
+    top: 2px;
+    left: 2px; */
+    width: 8px;
+    height: 8px;
+    top: 3px;
+    left: 3.2px;
+    border-radius: 2px;
+    background: #5c48f1;
+}
+.box.theme{
+    background-color: var(--elements-background-color);
+    border: 1px solid #5c48f1;
+}
+.parent input.color::before{
+    border:1px solid  #5c48f1;
+}
+.parent input::before{
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    left: 0;
+}
+.parent input[type="checkbox"]:checked input[type="checkbox"]::after{
+    display: none;
+}
+.box div > i{
+    font-size: 30px;
+    color: #5c48f1;
+    padding-bottom: 5px;
+}
+.box div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
