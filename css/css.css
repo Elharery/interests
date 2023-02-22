@@ -41,19 +41,24 @@ i.bug,i.fa-puzzle-piece{
 .parent .box .chexkbox-one {
     color: #5c48f1;
 }
-/* content: '';
-position: absolute;
-width: 13px;
-height: 13px;
-border: 1px solid #ddd;
-border-radius: 4px; */
 input[type="checkbox"]{
     appearance: none;
     position: absolute;
     left: 0;
     top: 0;
 }
+.box:hover input.opacity::before{
+    border: 1px solid #5c48f1;
+}
+.box:hover input.c::after{
+    /* color: #5c48f1; */
+    /* background-color: var(--main-purple-color); */
+    color: var(--main-purple-color);
+    display: block;
+    
+}
 .parent input.opacity::after{
+    display: none;
     content: '';
     position: absolute;
     /* width: 10px;
@@ -67,6 +72,9 @@ input[type="checkbox"]{
     border-radius: 2px;
     background: var(--element-border-color);
     /* background-color: var(--main-purple-color); */
+}
+.parent input.theme::before{
+    border: 1px solid var(--main-purple-color);
 }
 .parent input.theme::after{
     content: '';
@@ -86,9 +94,9 @@ input[type="checkbox"]{
     background-color: var(--elements-background-color);
     border: 1px solid #5c48f1;
 }
-.parent input.color::before{
+/* .parent input.color::before{
     border:1px solid  #5c48f1;
-}
+} */
 .parent input::before{
     content: '';
     position: absolute;
